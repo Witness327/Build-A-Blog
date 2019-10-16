@@ -44,11 +44,7 @@ def newpost():
 @app.route('/blog', methods=['POST', 'GET'])
 def blog():
     if request.method == 'GET':
-
         postid = request.args.get('id')
-
-
-
         blog_posts = Blog.query.get(postid)
         return render_template('blog.html', postid=postid, blog=blog_posts)
 
