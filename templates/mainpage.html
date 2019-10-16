@@ -12,11 +12,11 @@
     <ul style=" list-style-type: none;">
         {% for blog in blog_posts %}
         
-        <li style="font-weight: bold;"><a href="/blog">{{blog.title}}</a></li>
-        <li>{{blog.entry}}</li>
+        <li style="font-weight: bold;"><a href="/blog?id={{blog.id}}">{{ blog.title }}</a> 
+        <li>{{ blog.entry }}</li>
         <hr />
         {% endfor %}
     </ul>
-    
+
 
 {% endblock %}
